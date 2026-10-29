@@ -1,52 +1,59 @@
-***** Running nosetests with: -v --with-spec --spec-color
+test_db_create (tests.test_cli_commands.TestFlaskCLI.test_db_create)
+It should call the db-create command ... ok
+test_add_a_account (tests.test_models.TestAccount.test_add_a_account)
+It should Create an account and add it to the database ... ok
+test_create_an_account (tests.test_models.TestAccount.test_create_an_account)
+It should Create an Account and assert that it exists ... ok
+test_delete_an_account (tests.test_models.TestAccount.test_delete_an_account)
+It should Delete an account from the database ... ok
+test_deserialize_an_account (tests.test_models.TestAccount.test_deserialize_an_account)
+It should Deserialize an account ... ok
+test_deserialize_with_key_error (tests.test_models.TestAccount.test_deserialize_with_key_error)
+It should not Deserialize an account with a KeyError ... ok
+test_deserialize_with_type_error (tests.test_models.TestAccount.test_deserialize_with_type_error)
+It should not Deserialize an account with a TypeError ... ok
+test_find_by_name (tests.test_models.TestAccount.test_find_by_name)
+It should Find an Account by name ... ok
+test_list_all_accounts (tests.test_models.TestAccount.test_list_all_accounts)
+It should List all Accounts in the database ... ok
+test_read_account (tests.test_models.TestAccount.test_read_account)
+It should Read an account ... ok
+test_serialize_an_account (tests.test_models.TestAccount.test_serialize_an_account)
+It should Serialize an account ... ok
+test_update_account (tests.test_models.TestAccount.test_update_account)
+It should Update an account ... ok
+test_account_not_found (tests.test_routes.TestAccountService.test_account_not_found)
+It should not read an Account that is not found ... ok
+test_bad_request (tests.test_routes.TestAccountService.test_bad_request)
+It should not Create an Account when sending the wrong data ... ok
+test_cors_security (tests.test_routes.TestAccountService.test_cors_security)
+It should return a CORS header ... ok
+test_create_account (tests.test_routes.TestAccountService.test_create_account)
+It should Create a new Account ... ok
+test_delete_an_account (tests.test_routes.TestAccountService.test_delete_an_account)
+It should Delete a single Account ... ok
+test_empty_account_list (tests.test_routes.TestAccountService.test_empty_account_list)
+It should return an empty list when there are no accounts ... ok
+test_health (tests.test_routes.TestAccountService.test_health)
+It should be healthy ... ok
+test_index (tests.test_routes.TestAccountService.test_index)
+It should get 200_OK from the Home Page ... ok
+test_list_accounts (tests.test_routes.TestAccountService.test_list_accounts)
+It should list all accounts ... ok
+test_method_not_allowed (tests.test_routes.TestAccountService.test_method_not_allowed)
+It should not allow an illegal method call ... ok
+test_read_an_account (tests.test_routes.TestAccountService.test_read_an_account)
+It should Read a single Account ... ok
+test_security_headers (tests.test_routes.TestAccountService.test_security_headers)
+It should return security headers ... ok
+test_unsupported_media_type (tests.test_routes.TestAccountService.test_unsupported_media_type)
+It should not Create an Account when sending the wrong media type ... ok
+test_update_an_account (tests.test_routes.TestAccountService.test_update_an_account)
+It should Update a single Account ... ok
+test_update_not_exist_account (tests.test_routes.TestAccountService.test_update_not_exist_account)
+It should try to update an account that doesn't exist, and fail to ... ok
 
-Test Flask CLI Commands
-[1;32m- It should call the db-create command[1;0m
-
-Test Cases for Account Model
-[1;32m- It should Create an account and add it to the database[1;0m
-[1;32m- It should Create an Account and assert that it exists[1;0m
-[1;32m- It should Delete an account from the database[1;0m
-[1;32m- It should Deserialize an account[1;0m
-[1;32m- It should not Deserialize an account with a KeyError[1;0m
-[1;32m- It should not Deserialize an account with a TypeError[1;0m
-[1;32m- It should Find an Account by name[1;0m
-[1;32m- It should List all Accounts in the database[1;0m
-[1;32m- It should Read an account[1;0m
-[1;32m- It should Serialize an account[1;0m
-[1;32m- It should Update an account[1;0m
-
-Account Service Tests
-[1;32m- It should not read an Account that is not found[1;0m
-[1;32m- It should not Create an Account when sending the wrong data[1;0m
-[1;32m- It should return a CORS header[1;0m
-[1;32m- It should Create a new Account[1;0m
-[1;32m- It should Delete a single Account[1;0m
-[1;32m- It should return an empty list when there are no accounts[1;0m
-[1;32m- It should be healthy[1;0m
-[1;32m- It should get 200_OK from the Home Page[1;0m
-[1;32m- It should list all accounts[1;0m
-[1;32m- It should not allow an illegal method call[1;0m
-[1;32m- It should Read a single Account[1;0m
-[1;32m- It should return security headers[1;0m
-[1;32m- It should not Create an Account when sending the wrong media type[1;0m
-[1;32m- It should Update a single Account[1;0m
-[1;32m- It should try to update an account that doesn't exist, and fail to[1;0m
-
-Name                               Stmts   Miss  Cover   Missing
-----------------------------------------------------------------
-service/__init__.py                   22      3    86%   36-39
-service/common/__init__.py             0      0   100%
-service/common/cli_commands.py         7      0   100%
-service/common/error_handlers.py      32      3    91%   76-78
-service/common/log_handlers.py        10      1    90%   21
-service/common/status.py              46      0   100%
-service/config.py                     11      5    55%   12-16
-service/models.py                     69      2    97%   32, 127
-service/routes.py                     56      0   100%
-----------------------------------------------------------------
-TOTAL                                253     14    94%
 ----------------------------------------------------------------------
-Ran 27 tests in 2.269s
+Ran 27 tests in 0.529s
 
 OK

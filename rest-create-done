@@ -1,0 +1,19 @@
+COMMAND:
+curl.exe -sS -i -X POST 'http://127.0.0.1:8080/accounts' -H 'Content-Type: application/json' --data-binary '{"address":"456 Example Ave","name":"Sample User 2","phone_number":"555-0101","email":"sample2@example.com"}'
+
+OUTPUT:
+HTTP/1.1 201 CREATED
+Server: Werkzeug/2.1.2 Python/3.11.9
+Date: Thu, 29 Oct 2026 20:04:44 GMT
+Content-Type: application/json
+Content-Length: 143
+Location: http://127.0.0.1:8080/accounts/2
+Access-Control-Allow-Origin: *
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'; object-src 'none'
+Referrer-Policy: strict-origin-when-cross-origin
+Connection: close
+
+{"address":"456 Example Ave","date_joined":"2026-10-30","email":"sample2@example.com","id":2,"name":"Sample User 2","phone_number":"555-0101"}
