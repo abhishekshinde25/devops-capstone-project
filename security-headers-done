@@ -57,3 +57,5 @@ It should try to update an account that doesn't exist, and fail to ... ok
 Ran 27 tests in 0.529s
 
 OK
+
+GitHub Actions: Run unit tests with nose — success. Run: https://github.com/abhishekshinde25/assignment/actions/runs/40946041354
