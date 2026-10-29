@@ -9,9 +9,7 @@ This repository contains the Customer Accounts microservice for the [**IBM-CD028
 
 ## Usage
 
-You should use this template to start your DevOps Capstone project. It contains all of the code that you will need to get started.
-
-Do Not fork this code! It is meant to be used by pressing the  <span style=color:white;background:green>**Use this Template**</span> button in GitHub. This will copy the code to your own repository with no connection back to the original repository like a fork would. This is what you want.
+This repository implements the Customer Accounts REST microservice and includes its test suite, CI workflow, container image definition, Kubernetes manifests, and Tekton pipeline.
 
 ## Development Environment
 
