@@ -77,7 +77,8 @@ def list_accounts():
 def delete_account_by_email():
     """Deletes an Account identified by the email in the request body."""
     app.logger.info("Request to delete an Account by email")
-    check_content_type("application/json")
+    if request.mimetype != "application/json":
+        abort(status.HTTP_405_METHOD_NOT_ALLOWED)
     data = request.get_json()
     if not isinstance(data, dict) or not data.get("email"):
         abort(status.HTTP_400_BAD_REQUEST, "Account email is required")
