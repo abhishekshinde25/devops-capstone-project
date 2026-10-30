@@ -73,6 +73,21 @@ def list_accounts():
     return jsonify([account.serialize() for account in accounts]), status.HTTP_200_OK
 
 
+@app.route("/accounts", methods=["DELETE"])
+def delete_account_by_email():
+    """Deletes an Account identified by the email in the request body."""
+    app.logger.info("Request to delete an Account by email")
+    check_content_type("application/json")
+    data = request.get_json()
+    if not isinstance(data, dict) or not data.get("email"):
+        abort(status.HTTP_400_BAD_REQUEST, "Account email is required")
+    account = Account.find_by_email(data["email"])
+    if not account:
+        abort(status.HTTP_404_NOT_FOUND, f"Account with email [{data['email']}] could not be found.")
+    account.delete()
+    return jsonify({}), status.HTTP_204_NO_CONTENT
+
+
 ######################################################################
 # READ AN ACCOUNT
 ######################################################################

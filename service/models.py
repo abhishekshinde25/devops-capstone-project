@@ -143,3 +143,9 @@ class Account(db.Model, PersistentBase):
         """
         logger.info("Processing name query for %s ...", name)
         return cls.query.filter(cls.name == name)
+
+    @classmethod
+    def find_by_email(cls, email):
+        """Returns the Account with the given email, if it exists."""
+        logger.info("Processing email query for %s ...", email)
+        return cls.query.filter(cls.email == email).first()
